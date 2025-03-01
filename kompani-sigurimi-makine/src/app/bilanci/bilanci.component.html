@@ -1,10 +1,27 @@
-<p>Bilanci works!</p>
-<nav>
-  <ul>
-    <li><a routerLink="/raportet" routerLinkActive="active" ariaCurrentWhenActive="page">Raportet</a></li>
-    <li><a routerLink="/raport-shitje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Shitje</a></li>
-    <li><a routerLink="/raport-blerje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Blerje</a></li>
-    <li><a routerLink="/bilanci" routerLinkActive="active" ariaCurrentWhenActive="page">Bilanci</a></li>
-  </ul>
-</nav>
+<div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Date of birth</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bilanc of bilanci">
+          <td>{{ bilanc.makina }}</td>
+          <td>{{ bilanc.sigurimi }}</td>
+          <td>{{ bilanc.targa }}</td>
+          <td>{{ bilanc.shuma }}</td>
+  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
