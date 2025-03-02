@@ -2,5 +2,7 @@ export interface BilanciInterface {
     makina:string;
     targa:string;
     sigurimi:string;
-    shuma:number 
+    shumaNdajKlientit:number;
+    shumaPrejKlientit:number;
+    winLoss:number;
 }

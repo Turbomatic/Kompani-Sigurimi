@@ -1,12 +1,64 @@
-<div>
-  <div>
-    <table>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Go To</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/raportet"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Raportet</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/raport-shitje"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Raport Shitje</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/raport-blerje"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Raport Blerje</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/bilanci"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Bilanci</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="contaier">
+  <div class="row">
+    <table class="table table-dark">
       <thead>
         <tr>
           <th>Makina</th>
           <th>Sigurimi</th>
           <th>Targa</th>
-          <th>Shuma</th>
+          <th>Shuma Ndaj Klientit</th>
+          <th>Shuma Prej Klientit</th>
+          <th>Win/Loss</th>
         </tr>
       </thead>
       <tbody>
@@ -14,8 +66,18 @@
           <td>{{ bilanc.makina }}</td>
           <td>{{ bilanc.sigurimi }}</td>
           <td>{{ bilanc.targa }}</td>
-          <td>{{ bilanc.shuma }}</td>
-  
+          <td [ngClass]="{ 'high-cost-payment': bilanc.shumaNdajKlientit > 0 }">
+            {{ bilanc.shumaNdajKlientit }}
+          </td>
+          <td [ngClass]="{ 'high-income-payment': bilanc.shumaPrejKlientit > 0 }">
+            {{ bilanc.shumaPrejKlientit }}
+          </td>
+          <td [ngClass]="{
+            'green-background': bilanc.winLoss > 0,
+            'red-background': bilanc.winLoss < 0
+          }">
+            {{ bilanc.winLoss }}
+          </td>
         </tr>
       </tbody>
     </table>

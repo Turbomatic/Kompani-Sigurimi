@@ -1,11 +1,29 @@
 <p>raportet works!</p>
 <h1>Angular Router App</h1>
-<nav>
-  <ul>
-    <li><a routerLink="/raportet" routerLinkActive="active" ariaCurrentWhenActive="page">Raportet</a></li>
-    <li><a routerLink="/raport-shitje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Shitje</a></li>
-    <li><a routerLink="/raport-blerje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Blerje</a></li>
-    <li><a routerLink="/bilanci" routerLinkActive="active" ariaCurrentWhenActive="page">Bilanci</a></li>
-  </ul>
-</nav>
+
 <router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/raportet" routerLinkActive="active" ariaCurrentWhenActive="page">Raportet<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/raport-shitje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Shitje<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/raport-blerje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Blerje<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/raport-blerje" routerLinkActive="active" ariaCurrentWhenActive="page">Raport Blerje<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bilanci" routerLinkActive="active" ariaCurrentWhenActive="page">Bilanci<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
