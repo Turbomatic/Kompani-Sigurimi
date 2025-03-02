@@ -14,7 +14,7 @@ export const  BilanciMockData : BilanciInterface[] = [
             sigurimi:"4tt",
             shumaNdajKlientit:200,
             shumaPrejKlientit:150,
-            winLoss: calculateWinLoss(200,100)
+            winLoss: calculateWinLoss(150,200)
         }
     
 ]
