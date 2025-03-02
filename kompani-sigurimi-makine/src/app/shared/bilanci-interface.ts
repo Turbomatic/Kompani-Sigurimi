@@ -5,4 +5,7 @@ export interface BilanciInterface {
     shumaNdajKlientit:number;
     shumaPrejKlientit:number;
     winLoss:number;
+ 
+    
 }
+
